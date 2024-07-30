@@ -1,0 +1,172 @@
+@font-face {
+  font-family: "Young Serif";
+  src: url("./assets/fonts/young-serif/YoungSerif-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Outfit";
+  src: url("./assets/fonts/outfit/Outfit-VariableFont_wght.ttf");
+}
+
+:root {
+  /* Primary Color*/
+  --Nutmeg: hsl(14, 45%, 36%);
+  --DarkRasberry: hsl(332, 51%, 32%);
+
+  /* Neutral Fonts */
+  --White: hsl(0, 0%, 100%);
+  --RoseWhite: hsl(330, 100%, 98%);
+  --Eggshell: hsl(30, 54%, 90%);
+  --LightGrey: hsl(30, 18%, 87%);
+  --WengeBrown: hsl(30, 10%, 34%);
+  --DarkCharcoal: hsl(24, 5%, 18%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--Eggshell);
+  font-family: "Outfit", sans-serif !important;
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--WengeBrown);
+}
+
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.heroimage {
+  background-color: var(--White);
+  border-radius: 20px 20px;
+  padding: 2rem 2rem;
+  max-width: 700px;
+  margin-top: 5rem;
+}
+
+img {
+  width: 100%;
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+
+.container {
+  background-color: var(--White);
+  max-width: 700px;
+}
+
+h1 {
+  font-family: "Young Serif", sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--DarkCharcoal);
+}
+
+h2 {
+  font-family: "Young Serif", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--Nutmeg);
+}
+
+.box {
+  background-color: var(--RoseWhite);
+  border-radius: 10px;
+  padding: 2rem 2rem;
+}
+
+.box span {
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--DarkRasberry);
+}
+
+.box ul {
+  margin-top: 1rem;
+  line-height: 2.5;
+}
+
+.box ul li::marker {
+  color: var(--DarkRasberry);
+  font-size: 13px;
+}
+
+ul.ingredients {
+  line-height: 2;
+}
+
+ul.ingredients li {
+  padding-left: 1rem;
+}
+
+ul.ingredients li::marker {
+  color: var(--DarkRasberry);
+  font-size: 13px;
+}
+
+ol.instructions {
+  line-height: 2;
+  padding-left: 1.5rem;
+  padding-right: 1rem;
+}
+
+ol.instructions li {
+  padding-left: 10px;
+}
+
+ol.instructions li::marker {
+  color: var(--DarkRasberry);
+  font-weight: 600;
+}
+
+.table {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  > * {
+    padding-block: 1rem;
+  }
+  > *:nth-of-type(odd) {
+    padding-inline-start: 2rem;
+  }
+  > *:nth-of-type(even) {
+    color: var(--Nutmeg);
+    font-weight: 700;
+  }
+  > :not(:nth-last-child(-n+2)) {
+    border-bottom: solid var(--LightGrey) 1px;
+  }
+}
+
+.attribution {
+  font-size: 1rem;
+  text-align: center;
+}
+
+.attribution a {
+  text-decoration: none;
+  color: var(--DarkRasberry);
+}
+
+@media (max-width: 35rem) {
+  .heroimage {
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+  }
+  img {
+    border-radius: 0;
+  }
+  .container {
+    padding: 0 2rem;
+  }
+}
