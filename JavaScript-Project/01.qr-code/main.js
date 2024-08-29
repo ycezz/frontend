@@ -11,8 +11,8 @@ document.getElementById('generate-btn').addEventListener('click', function() {
 
     new QRCode(qrCodeContainer, {
         text: url,
-        width: 250,
-        height: 250,
+        width: 200,
+        height: 200,
         colorDark: '#FFFFFF',
         colorLight: "rgba(0, 0, 0, 0)"
     });

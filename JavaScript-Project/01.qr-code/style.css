@@ -172,11 +172,17 @@ body {
   height: auto;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 360px) {
   #qr-code {
     width: 70%;
+    top: 25%;
+  }
+
+  .card img {
+    width: 100%;
   }
 }
+
 
 /* description */
 .text {
