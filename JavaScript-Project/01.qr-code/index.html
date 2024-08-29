@@ -15,7 +15,8 @@
     <main>
       <div class="container">
         <div class="card">
-          <img src="/img/Oval.png" alt="" id="qr-code">
+          <img src="/img/Oval.png" alt="QR Code Background">
+          <div id="qr-code"></div>
           <div class="text">
             <h2>Improve your front-end skills by building projects</h2>
             <p>
@@ -24,7 +25,7 @@
           </div>
           <div class="form">
             <input type="text" id="url-links" placeholder="https://example.com">
-            <button>Generate QR Code</button>
+            <button id="generate-btn">Generate QR Code</button>
           </div>
         </div>
       </div>
@@ -40,7 +41,7 @@
       </div>
     </footer>
     
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
     <script type="module" src="/main.js"></script>
   </body>
 </html>

@@ -27,9 +27,8 @@
     --size-400: 1rem;
     --size-500: 1.25rem;
     --size-600: 2rem;
-    --size-700: 3rem;
-    --size-800: 4rem;
-    --size-900: 5rem;
+    --size-700: 4rem;
+    --size-900: 25rem;
 }
 
 /* // https://piccalil.li/blog/a-modern-css-reset */
@@ -154,6 +153,29 @@ body {
     padding: var(--size-400);
     text-align: center;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.05);
+    position: relative;
+}
+
+.card img {
+  max-width: 100%; 
+  display: block;
+  margin: 0 auto;
+}
+
+#qr-code {
+  position: absolute;
+  top: 27%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 250px;
+  height: auto;
+}
+
+@media (max-width: 600px) {
+  #qr-code {
+    width: 70%;
+  }
 }
 
 /* description */
