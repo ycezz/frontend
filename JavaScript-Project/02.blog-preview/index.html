@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Blog preview</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <main>
+        <div class="container">
+            <img src="./images/illustration-article.svg" alt="Ilustration Image">
+            <div class="learning">Learning</div>
+            <p class="date">Published 21 Dec 2023</p>
+            <h1>HTML & CSS foundations</h1>
+            <p class="description">
+                These languages are the backbone of every website, defining structure,
+          content, and presentation.
+            </p>
+            <div class="author">
+                <img src="./images/image-avatar.webp" alt="Author">
+                <span>Greg Hooper</span>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="attribution">
+            Challenge by
+            <div>
+                <a
+            href="https://www.frontendmentor.io?ref=challenge"
+            target="_blank"
+            aria-label="Frontend Mentor website"
+            >Frontend Mentor</a
+          >
+            </div>
+            <div>Coded by <a href="https://github.com/ycezz">Putri Mila</a></div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let heading = document.querySelector("h1");
+            let container = document.querySelector(".container");
+
+            document.addEventListener('mouseover', function (e) {
+                if( e.target === heading ) {
+                    heading.style.color = 'hsl(47, 88%, 63%)';
+                    heading.style.cursor = 'pointer';
+                    container.style.boxShadow = '10px 10px';
+                } else {
+                    heading.style.color = '';
+                    container.style.boxShadow = '';
+                }
+            });
+        });
+
+        document.body.addEventListener('mousemove', function(event) {
+            const xPos = Math.round((event.clientX / window.innerWidth) * 255);
+            const yPos = Math.round((event.clientY / window.innerHeight) * 255);
+            document.body.style.backgroundColor = 'rgb('+ xPos +','+ yPos +',100)';
+        });
+    </script>
+</body>
+</html>
