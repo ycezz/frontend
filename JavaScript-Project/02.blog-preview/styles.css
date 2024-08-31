@@ -178,6 +178,10 @@ footer {
     bottom: 0;
 }
 
+.attribution {
+    font-size: var(--fs-350);
+}
+
 .attribution a {
     color: var(--clr-hitam);
     text-decoration: none;
